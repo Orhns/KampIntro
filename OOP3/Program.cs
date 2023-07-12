@@ -20,11 +20,11 @@ namespace OOP3
            
             BasvuruManager basvuruManager = new BasvuruManager();
             //basvuruManager.BasvuruYap(esnafKrediManager, fileLoggerService);
-            basvuruManager.BasvuruYap(ihtiyacKrediManager, new List<ILoggerService> { databaseLoggerService, new SmsLoggerService() });
+            //basvuruManager.BasvuruYap(ihtiyacKrediManager, new List<ILoggerService> { databaseLoggerService, new SmsLoggerService() });
 
             List<IKrediManager> krediler = new List<IKrediManager>() { ihtiyacKrediManager, tasitKrediManager };
 
-            //basvuruManager.KrediOnBilgilendirmesiYap(krediler);
+            basvuruManager.KrediOnBilgilendirmesiYap(krediler);
         }
     }
 }
